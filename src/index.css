@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-50: #f5f7fa;
+    --navy-100: #eaeef4;
+    --navy-200: #d1dae7;
+    --navy-300: #b3c2d9;
+    --navy-400: #8fa4c6;
+    --navy-500: #6b86b3;
+    --navy-600: #4a669f;
+    --navy-700: #3d5482;
+    --navy-800: #334268;
+    --navy-900: #2a3654;
+  }
+}
+
+@layer utilities {
+  .scale-101 {
+    transform: scale(1.01);
+  }
+  .scale-102 {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes scale-check {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-scale-check {
+  animation: scale-check 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+body {
+  @apply antialiased text-navy-800;
+}
